@@ -32,7 +32,7 @@ in the OCR output
 Requirements - Python3
 Program to run - ocr_correction.py
 Output - Wait around 8-10 minutes for the program to print output since the making and searching BK tree with around 400000 nodes takes time
-Only the tokens that were properly corrected are printed in the below form - 
+Only the tokens that were properly corrected are printed in the below form - </br>
 #############Corrected Output################</br>
 Incorrect English Token:  ano
 Corrected English Token:  and

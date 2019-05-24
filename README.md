@@ -1,17 +1,17 @@
 # OCR-Correction
 
-Objective of this project is to solve English token errors in OCR output for Post-OCR Text Correction competition by ICDAR.
-•	Input: Erroneous English Token
+Objective of this project is to solve English token errors in OCR output for Post-OCR Text Correction competition by ICDAR. </br>
+•	Input: Erroneous English Token </br>
 e.g. – hlmtt
 
-•	Output: Corrected English Token
+•	Output: Corrected English Token </br>
 e.g. – helmet
 
 #############
 Model - 1 
 #############
 
-•	Character set: (a-z); (A-Z); (@)
+•	Character set: (a-z); (A-Z); (@) </br>
 
 •	Data (Train directory - ICDAR_train_without_punc, Test directory - ICDAR_test_without_punc) </br>
 All the data is converted into the form of (incorrect token, correct token) pairs
@@ -29,14 +29,14 @@ Using the training data to learn the error patterns using character confusion pr
 in the OCR output
 
 •	To Run </br>
-Requirements - Python3
-Program to run - ocr_correction.py
-Output - Wait around 8-10 minutes for the program to print output since the making and searching BK tree with around 400000 nodes takes time
+Requirements - Python3 </br>
+Program to run - ocr_correction.py </br>
+Output - Wait around 8-10 minutes for the program to print output since the making and searching BK tree with around 400000 nodes takes time </br>
 Only the tokens that were properly corrected are printed in the below form - </br>
 #############Corrected Output################</br>
-Incorrect English Token:  ano
-Corrected English Token:  and
-Ground Truth English Token:  and
+Incorrect English Token:  ano </br>
+Corrected English Token:  and </br>
+Ground Truth English Token:  and </br>
 #############################################</br>
 
 Accuracy - 38% where the test dataset consists of only incorrect tokens removed of punctuations </br>

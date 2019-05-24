@@ -1,9 +1,10 @@
 import edit_distance
 import BK_tree
 import character_level_alignment
+import os
 
 # Total number of files
-F = 148
+F = 100
 
 #Root for the BK Tree
 root = None
@@ -58,17 +59,20 @@ createConfusionDictionary(ngram, totalChar)
 #==============================================================================
 faultInDataset = 0 # Unequal ocrword and gtword
 for i in range(F):
-    inputFile1 = open('ICDAR_train_without_punc/' + str(i) + ".txt", "r", encoding="utf-8")
-    allLines = inputFile1.readlines()
-    inputFile1.close()
-    for j in range (0,len(allLines)):
-        ocrWord, gtWord = allLines[j][:-1].split(" , ")
-        if(len(ocrWord)!=len(gtWord)):
-            faultInDataset+=1
-            continue
-        else:
-            totalWordFrequency+=1
-        updateConfusionDictionary(ocrWord, gtWord, ngram, totalChar)
+    filePath = 'ICDAR_train_final_without_punc/' + str(i) + ".txt"
+    exists = os.path.isfile(filePath)
+    if exists:
+        inputFile1 = open(filePath, "r", encoding="utf-8")
+        allLines = inputFile1.readlines()
+        inputFile1.close()
+        for j in range (0,len(allLines)):
+            ocrWord, gtWord = allLines[j][:-1].split(" , ")
+            if(len(ocrWord)!=len(gtWord)):
+                faultInDataset+=1
+                continue
+            else:
+                totalWordFrequency+=1
+            updateConfusionDictionary(ocrWord, gtWord, ngram, totalChar)
 
 
 def calculateConfusionDictProb(ngram, totalChar):

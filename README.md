@@ -13,7 +13,7 @@ Model - 1
 
 •	Character set: (a-z); (A-Z); (@) </br>
 
-•	Data (Train directory - ICDAR_train_without_punc, Test directory - ICDAR_test_without_punc) </br>
+•	Data (Train directory - ICDAR_train_final_without_punc, Test directory - ICDAR_test_without_punc) </br>
 All the data is converted into the form of (incorrect token, correct token) pairs
 The pairs are extracted from the ICDAR dataset as follows:
 1. The incorrect token is taken from the OCR output in the ICDAR dataset and the corresponding correct token is taken from the ground truth in the dataset

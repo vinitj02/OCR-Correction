@@ -13,22 +13,22 @@ Model - 1
 
 •	Character set: (a-z); (A-Z); (@)
 
-•	Data (Train directory - ICDAR_train_without_punc, Test directory - ICDAR_test_without_punc)
+•	Data (Train directory - ICDAR_train_without_punc, Test directory - ICDAR_test_without_punc) </br>
 All the data is converted into the form of (incorrect token, correct token) pairs
 The pairs are extracted from the ICDAR dataset as follows:
 1. The incorrect token is taken from the OCR output in the ICDAR dataset and the corresponding correct token is taken from the ground truth in the dataset
 2. Both of these are then removed of any punctuations, spaces or special characters except the ones in the defined character set
 
-•	Dictionary - (directory - Dictionary/frequency_dict_without_punc.txt)
+•	Dictionary - (directory - Dictionary/frequency_dict_without_punc.txt)</br>
 Our first model is vocabulary based, so we use a dictionary
 We modify the dictionary by updating the frequency of the words by counting their occurences in the dataset. In this process, we also add the new words from the 
 dataset into the dictionary
 
-•	Motivation for the first model
+•	Motivation for the first model </br>
 Using the training data to learn the error patterns using character confusion probabilities thereby trying to learn which ngrams are being repeatedly misunderstood
 in the OCR output
 
-•	To Run
+•	To Run </br>
 Requirements - Python3
 Program to run - ocr_correction.py
 Output - Wait around 8-10 minutes for the program to print output since the making and searching BK tree with around 400000 nodes takes time

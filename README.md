@@ -33,11 +33,11 @@ Requirements - Python3
 Program to run - ocr_correction.py
 Output - Wait around 8-10 minutes for the program to print output since the making and searching BK tree with around 400000 nodes takes time
 Only the tokens that were properly corrected are printed in the below form - 
-#############Corrected Output################
+#############Corrected Output################</br>
 Incorrect English Token:  ano
 Corrected English Token:  and
 Ground Truth English Token:  and
-#############################################
+#############################################</br>
 
-Accuracy - 38% where the test dataset consists of only incorrect tokens removed of punctuations
+Accuracy - 38% where the test dataset consists of only incorrect tokens removed of punctuations </br>
 Accuracy - 52.5% where the test dataset consists of only incorrect tokens which didn't have punctuations in the first place (ICDAR_test_trivial)
